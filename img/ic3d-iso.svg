@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><radialGradient id="sh" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#3a2410" stop-opacity=".45"/><stop offset="1" stop-color="#3a2410" stop-opacity="0"/></radialGradient>
+<radialGradient id="gloss" cx="35%" cy="25%" r="60%"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="chk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4B8"/><stop offset=".55" stop-color="#F6E27A"/><stop offset="1" stop-color="#D9B544"/></linearGradient><linearGradient id="rib" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A0482F"/><stop offset="1" stop-color="#5E2214"/></linearGradient>
+<radialGradient id="rim" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#FFF1A8"/><stop offset=".5" stop-color="#E6BE4A"/><stop offset="1" stop-color="#8E5E17"/></radialGradient>
+<radialGradient id="gold" cx="40%" cy="32%" r="75%"><stop offset="0" stop-color="#FFF6C4"/><stop offset=".55" stop-color="#F2CF5C"/><stop offset="1" stop-color="#B98422"/></radialGradient></defs><ellipse cx="60" cy="111" rx="36" ry="6.5" fill="url(#sh)"/><path d="M44 70 L32 104 L44 99 L50 110 L60 80 Z" fill="url(#rib)"/><path d="M76 70 L88 104 L76 99 L70 110 L60 80 Z" fill="url(#rib)"/>
+<circle cx="60" cy="52" r="38" fill="url(#rim)"/>
+<circle cx="60" cy="52" r="38" fill="none" stroke="#7A4E17" stroke-width="5" stroke-dasharray="3.2 3.2" opacity=".55"/>
+<circle cx="60" cy="52" r="29" fill="url(#gold)"/><circle cx="60" cy="52" r="29" fill="none" stroke="#9C6A1E" stroke-width="2"/>
+<ellipse cx="50" cy="38" rx="17" ry="10" fill="#fff" opacity=".35" transform="rotate(-25 50 38)"/>
+<path d="M45 52 L56 63 L76 41" transform="translate(1.5 2.5)" fill="none" stroke="#2A1608" stroke-opacity=".45" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45 52 L56 63 L76 41" fill="none" stroke="#4A2A14" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45 52 L56 63 L76 41" transform="translate(-.8 -1.8)" fill="none" stroke="#C08A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/></svg>
