@@ -959,5 +959,6 @@ function ijtEmail(){const b=document.getElementById('ijt_bean').value||'a bean',
 <script>(function(){var b=document.querySelector('#ij .ijtop');if(!b||b.dataset.wired)return;b.dataset.wired='1';
 var hero=document.querySelector('#ij section');function t(){var r=hero&&hero.getBoundingClientRect();b.classList.toggle('show',r?r.bottom<innerHeight*0.2:(window.pageYOffset>300))}
 window.addEventListener('scroll',t,{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});t();})();</script>
+<script>(function(){var v=Date.now(),cur=(location.pathname.split('/').pop()||'index.html');document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');var m=/^(index|beans|adventure)\.html(\?[^#]*)?(#.*)?$/.exec(h);if(m&&m[1]+'.html'!==cur)a.setAttribute('href',m[1]+'.html?v='+v+(m[3]||''))})})();</script>
 </body>
 </html>
