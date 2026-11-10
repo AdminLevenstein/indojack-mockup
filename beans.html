@@ -918,7 +918,7 @@ function ijtGenerate(){
 }
 function ijtCopy(){const x=document.getElementById('ijt_code');x.select();(navigator.clipboard?navigator.clipboard.writeText(x.value):Promise.reject()).then(()=>alert('Code copied. Wire it to HQ.'),()=>{document.execCommand('copy');alert('Code copied.')})}
 function ijtEmail(){const b=document.getElementById('ijt_bean').value||'a bean',t=document.getElementById('ijt_taster').value||'';
-  location.href='mailto:admin@levenstein.net?cc=nick@levenstein.net,gabriella@levenstein.net&subject='+encodeURIComponent('IndoJack tasting report - '+b+' - '+t)+'&body='+encodeURIComponent('Official tasting report filed:\n\n'+document.getElementById('ijt_code').value+'\n\n('+document.getElementById('ijt_summary').textContent+')')}
+  window.top.location.href='mailto:admin@levenstein.net?cc=nick@levenstein.net,gabriella@levenstein.net&subject='+encodeURIComponent('IndoJack tasting report - '+b+' - '+t)+'&body='+encodeURIComponent('Official tasting report filed:\n\n'+document.getElementById('ijt_code').value+'\n\n('+document.getElementById('ijt_summary').textContent+')')}
 </script>
 <script src="hornbill.js"></script>
 <script>document.documentElement.setAttribute("data-hf","lucky")</script>
