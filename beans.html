@@ -678,6 +678,10 @@ html[data-hf] #ij footer .join{margin-bottom:26px!important}
 html[data-hf] #ij .plans h2{margin-bottom:44px!important}
 html[data-hf] #ij .faq h2{margin-bottom:56px!important}
 #ij .jnw{white-space:nowrap}
+
+/* 2026-11-10: tighter hero headline lines */
+html[data-hf] #ij h1{line-height:.8!important}
+html[data-hf] #ij h1 .line{margin-bottom:-.24em!important}
 </style>
 </head>
 <body>
@@ -823,7 +827,7 @@ html[data-hf] #ij .faq h2{margin-bottom:56px!important}
   <div class="wrap">
     <div class="grid">
       <div class="jleft">
-        <h2 id="judgeTitle">You'll be the <span class="jnw">judge<img class="jack-inline" src="img/jack-peek.png" alt="IndoJack"></span></h2>
+        <h2 id="judgeTitle">You'll be<br><span class="jnw">the judge<img class="jack-inline" src="img/jack-peek.png" alt="IndoJack"></span></h2>
         <p class="lead">Tell us if you think they're worth it. File your official tasting report below.</p>
         <div class="step"><span class="n">01</span><div><h3>Brew like a professional</h3><p>Same water (~200°F), brew as an Espresso (40ml).</p></div></div>
         <div class="step"><span class="n">02</span><div><h3>Taste blind, judge fairly</h3><p>Label the cups A / B / C.</p></div></div>
@@ -884,7 +888,7 @@ html[data-hf] #ij .faq h2{margin-bottom:56px!important}
   function size(){
     if(innerWidth<=900){h.style.fontSize='';return}
     const target=form.offsetHeight;let lo=30,hi=260;
-    for(let i=0;i<18;i++){const m=(lo+hi)/2;h.style.fontSize=m+'px';(col.scrollHeight>target?hi=m:lo=m)}
+    for(let i=0;i<18;i++){const m=(lo+hi)/2;h.style.fontSize=m+'px';((col.scrollHeight>target||h.scrollWidth>h.clientWidth+2)?hi=m:lo=m)}
     h.style.fontSize=lo+'px';
   }
   document.fonts.ready.then(size);addEventListener('resize',size);size();
