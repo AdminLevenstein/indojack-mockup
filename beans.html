@@ -684,9 +684,9 @@ html[data-hf] #ij h1{line-height:.8!important}
 html[data-hf] #ij h1 .line{margin-bottom:-.24em!important}
 
 /* 2026-11-10: discreet back-to-top arrow at the end of every section */
-#ij .totop{position:absolute;right:max(16px,calc(var(--g) * .5));bottom:18px;z-index:5;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(36,23,12,.32);color:#fff;font:600 18px/1 'Josefin Sans',sans-serif;text-decoration:none;opacity:.55;transition:opacity .2s,transform .2s;cursor:pointer;border:0}
+#ij .totop{position:absolute;right:max(16px,calc(var(--g) * .5));bottom:18px;z-index:5;height:34px;padding:0 14px;border-radius:17px;display:inline-flex;align-items:center;gap:6px;letter-spacing:.08em;font-size:12px!important;background:rgba(36,23,12,.5);color:#fff;font:600 18px/1 'Josefin Sans',sans-serif;text-decoration:none;opacity:.8;transition:opacity .2s,transform .2s;cursor:pointer;border:0}
 #ij .totop:hover,#ij .totop:focus-visible{opacity:1;transform:translateY(-2px)}
-#ij .torn-b > .totop,#ij .torn-tb > .totop{bottom:calc(var(--tear) + 12px)}
+#ij .torn-b > .totop,#ij .torn-tb > .totop,#ij #faq > .totop{bottom:calc(var(--tear) + 12px)}
 </style>
 </head>
 <body>
@@ -933,9 +933,9 @@ function ijtEmail(){const b=document.getElementById('ijt_bean').value||'a bean',
 <script>document.documentElement.setAttribute("data-hf","lucky")</script>
 </div>
 <script>(function(){var r=document.getElementById('ij');if(!r||r.dataset.totop)return;r.dataset.totop='1';
-[].slice.call(r.querySelectorAll('section')).forEach(function(s,i){if(i===0||s.parentElement.closest('section'))return;
+[].slice.call(r.querySelectorAll('.split.exp,#specs,#plans,#faq,.bstory,.judge,.vols')).forEach(function(s){
 if(getComputedStyle(s).position==='static')s.style.position='relative';
-var a=document.createElement('button');a.type='button';a.className='totop';a.setAttribute('aria-label','Back to top');a.innerHTML='&uarr;';
-a.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});s.appendChild(a);});})();</script>
+var a=document.createElement('button');a.type='button';a.className='totop';a.setAttribute('aria-label','Back to top');a.innerHTML='BACK TO TOP <span aria-hidden="true">&uarr;</span>';
+a.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});var n=s.nextElementSibling;while(n&&!/SECTION|FOOTER/.test(n.tagName))n=n.nextElementSibling;if(n&&/torn-t/.test(n.className))a.style.bottom='calc(var(--tear) + 14px)';s.appendChild(a);});})();</script>
 </body>
 </html>
