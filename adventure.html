@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-hf="lucky">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Adventure — IndoJack Coffee Mockup</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Bangers&family=Acme&family=Instrument+Serif&family=Cormorant+Garamond:wght@500&family=Newsreader:opsz,wght@6..72,300&family=Libre+Caslon+Display&family=DM+Serif+Display&family=Playfair+Display:wght@400&family=Mulish:wght@300;400&family=Outfit:wght@300;400;600&family=Jost:wght@300;400&family=Inter:wght@300;400&family=Josefin+Sans:wght@300;400;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Bangers&family=Acme&family=Rye&family=Luckiest+Guy&family=Instrument+Serif&family=Cormorant+Garamond:wght@500&family=Newsreader:opsz,wght@6..72,300&family=Libre+Caslon+Display&family=DM+Serif+Display&family=Playfair+Display:wght@400&family=Mulish:wght@300;400&family=Outfit:wght@300;400;600&family=Jost:wght@300;400&family=Inter:wght@300;400&family=Josefin+Sans:wght@300;400;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:"IndoJack Logo";src:url("fonts/IndoJackLogo-Regular.woff2") format("woff2"),url("fonts/IndoJackLogo-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro-bold.ttf) format('truetype');font-weight:700;font-style:normal}
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro-bolditalic.ttf) format('truetype');font-weight:700;font-style:italic}
@@ -52,7 +54,7 @@ body{margin:0;background:#fff}
 #ij .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,4,.55) 0%,rgba(20,12,4,0) 22%,rgba(20,12,4,0) 55%,rgba(20,12,4,.65) 100%);pointer-events:none}
 #ij .nav{position:absolute;top:0;left:0;right:0;z-index:8;display:flex;align-items:center;justify-content:space-between;padding:24px var(--g);padding-left:var(--left-g)}
 #ij .logo{font-family:var(--serif);font-size:1.7rem;text-decoration:none;color:#fff;line-height:1}
-#ij .logo img{display:block;height:clamp(58px,5.6vw,92px);width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+#ij .logo img{display:block;height:clamp(40px,3.6vw,58px);width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
 #ij .nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;position:absolute;left:50%;transform:translateX(-50%)}
 /* menu buttons wear the comic caption box */
 #ij .nav ul a{display:inline-block;background:var(--comic);color:#111;border:2.5px solid #111;box-shadow:3px 3px 0 #111;padding:7px 14px;
@@ -744,6 +746,38 @@ body{margin:0;background:#fff}
   #ij .ajack{height:min(50vh,420px)!important;right:4vw!important}
   #ij .ahero .mapsvg{top:0!important;height:100%!important;width:auto!important;left:calc(7vw - 6px - max(100vh,720px) * 34 / 1240)!important;transform:none!important}
 }
+
+/* 2026-11-10: IndoJack Logo font for every headline; sentence case except the Home video headline */
+#ij h1,#ij h2,#ij h3,#ij .serif,#ij .plan-name,#ij .price,#ij footer .big,#ij .ij-word,#ij .ctitle b,#ij footer .join{font-family:"IndoJack Logo",'Acme',cursive!important;font-weight:400!important;font-style:normal!important}
+#ij h1,#ij h2,#ij h3,#ij .bhero h1,#ij .ahero h1,#ij .ctitle b,#ij .plan-name{text-transform:none!important}
+#ij h1 em,#ij h2 em,#ij h3 em{font-style:normal}
+
+/* 2026-11-10 headline font switcher (review only) */
+html[data-hf="acme"] #ij h1,html[data-hf="acme"] #ij h1 .w,html[data-hf="acme"] #ij h2,html[data-hf="acme"] #ij h3,html[data-hf="acme"] #ij .serif,html[data-hf="acme"] #ij .plan-name,html[data-hf="acme"] #ij .price,html[data-hf="acme"] #ij footer .big,html[data-hf="acme"] #ij .ij-word,html[data-hf="acme"] #ij .ctitle b,html[data-hf="acme"] #ij footer .join{font-family:'Acme','Comic Sans MS',cursive!important;font-style:italic!important;font-weight:700!important}
+html[data-hf="rye"] #ij h1,html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join{font-family:'Rye',serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:.01em}
+html[data-hf="lucky"] #ij h1,html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{font-family:'Luckiest Guy',cursive!important;font-style:normal!important;font-weight:400!important;letter-spacing:.02em}
+html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join,html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{background:linear-gradient(180deg,#FDCF2D 0%,#FDC724 25%,#FDBD1C 50%,#FDA911 75%,#FD9B09 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;-webkit-text-stroke:.045em #6B1803!important;paint-order:stroke fill;text-shadow:none!important;filter:drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #2E0702)}
+html[data-hf="rye"] #ij h1 em,html[data-hf="rye"] #ij h2 em,html[data-hf="rye"] #ij h3 em,html[data-hf="lucky"] #ij h1 em,html[data-hf="lucky"] #ij h2 em,html[data-hf="lucky"] #ij h3 em{-webkit-text-fill-color:transparent!important;color:transparent!important}
+.hfpick{position:fixed;left:16px;bottom:16px;z-index:99999;background:#fff;border:2.5px solid #111;box-shadow:3px 3px 0 #111;padding:8px 10px;font:600 13px/1.2 'Josefin Sans',sans-serif;color:#111}
+.hfpick label{display:block;margin:0 0 5px;letter-spacing:.04em;text-transform:uppercase;font-size:11px}
+.hfpick select{font:inherit;padding:5px 6px;border:1.5px solid #111;background:#fff;min-height:36px}
+
+/* 2026-11-10: Luckiest Guy chosen; hero headline italic like the logo; no clipped tops */
+html[data-hf] #ij h1 .line{padding-top:.2em!important;padding-bottom:.16em!important;margin-top:-.2em!important;margin-bottom:-.16em!important;padding-left:.08em!important;padding-right:.3em!important}
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h1 em{font-style:italic!important}
+
+/* 2026-11-10: every headline italic with Luckiest Guy */
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h1 em,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij h2 em,html[data-hf="lucky"] #ij h3 em,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{font-style:italic!important}
+
+/* 2026-11-10: keep the gold fill under slanted letters (gradient box must cover the italic overhang) */
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join,html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join{padding-right:.35em!important;margin-right:-.35em!important;padding-top:.12em!important;padding-bottom:.1em!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* 2026-11-10: breathing room under headings */
+html[data-hf] #ij .wlcard h2{margin-bottom:28px!important}
+html[data-hf] #ij footer .join{margin-bottom:26px!important}
+html[data-hf] #ij .plans h2{margin-bottom:44px!important}
+html[data-hf] #ij .faq h2{margin-bottom:56px!important}
+#ij .jnw{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -789,7 +823,7 @@ body{margin:0;background:#fff}
 <rect x="34" y="30" width="2332" height="1180" fill="none" stroke="#5A3A1E" stroke-width="5" stroke-dasharray="26 14"/>
 </svg>
   <nav class="nav" id="ijnav">
-    <a class="logo" href="index.html"><img src="img/logo-indojack-v3.svg" alt="IndoJack Coffee"></a>
+    <a class="logo" href="index.html"><img src="img/logo-indojack-sign.png" alt="IndoJack Coffee"></a>
     <ul>
       <li><a href="beans.html">The Beans</a></li>
       <li><a href="adventure.html" aria-current="page">The Adventure</a></li>
@@ -800,35 +834,35 @@ body{margin:0;background:#fff}
   <div class="ajack" aria-hidden="true"><img src="img/jack-wave.png" alt=""></div>
   <div class="abubble"><p>I source the volcanic gold so you can stay in your pajamas</p></div>
   <div class="inner">
-    <h1><span class="line"><span class="w"><em>Comic</em></span></span><span class="line"><span class="w">Antics</span></span></h1>
+    <h1><span class="line"><span class="w"><em>Comic</em></span></span><span class="line"><span class="w">antics</span></span></h1>
   </div>
 </section>
 
 <section class="vols">
   <div class="wrap">
 <article class="vol reveal" data-v="0">
-  <div class="vcover polaroid"><img src="img/v1-cover.jpg" alt="IndoJack in The Fortress Adventure"></div>
-  <div class="vtext"><p class="kicker">Vol <b class="vnum">01</b> · Escape</p><h3>The Fortress Adventure</h3><p>IndoJack sneaks into the Overpriced Pod Fortress and walks out with something better than gold, a map to Gayo.</p><p class="vq">"Who says great crema has to cost an arm and a leg?"</p>
+  <div class="vcover polaroid"><img src="img/v1-cover.jpg" alt="IndoJack in The fortress adventure"></div>
+  <div class="vtext"><p class="kicker">Vol <b class="vnum">01</b> · Escape</p><h3>The fortress adventure</h3><p>IndoJack sneaks into the Overpriced Pod Fortress and walks out with something better than gold, a map to Gayo.</p><p class="vq">"Who says great crema has to cost an arm and a leg?"</p>
   <button class="btn btn-yellow" type="button" data-open="0">READ VOL <b class="vnum">01</b></button></div>
 </article>
 <article class="vol reveal" data-v="1">
-  <div class="vcover polaroid"><img src="img/v2-cover.jpg" alt="IndoJack in Back to the Jungle"></div>
-  <div class="vtext"><p class="kicker">Vol <b class="vnum">02</b> · Expedition</p><h3>Back to the Jungle</h3><p>Into the Gayo highlands, where the forest has its own guardians and the coffee has its own guardians too.</p><p class="vq">"Every great cup starts with a forest."</p>
+  <div class="vcover polaroid"><img src="img/v2-cover.jpg" alt="IndoJack in Back to the jungle"></div>
+  <div class="vtext"><p class="kicker">Vol <b class="vnum">02</b> · Expedition</p><h3>Back to the jungle</h3><p>Into the Gayo highlands, where the forest has its own guardians and the coffee has its own guardians too.</p><p class="vq">"Every great cup starts with a forest."</p>
   <button class="btn btn-yellow" type="button" data-open="1">READ VOL <b class="vnum">02</b></button></div>
 </article>
 <article class="vol reveal" data-v="2">
-  <div class="vcover polaroid"><img src="img/v3-cover.jpg" alt="IndoJack in The Flavor Fatigue Dragon"></div>
-  <div class="vtext"><p class="kicker">Vol <b class="vnum">03</b> · Flavor</p><h3>The Flavor Fatigue Dragon</h3><p>A grey dragon is draining the taste out of every cup, and only Gayo beans can bring the color back.</p><p class="vq">"Flavor restored."</p>
+  <div class="vcover polaroid"><img src="img/v3-cover.jpg" alt="IndoJack in The flavor fatigue dragon"></div>
+  <div class="vtext"><p class="kicker">Vol <b class="vnum">03</b> · Flavor</p><h3>The flavor fatigue dragon</h3><p>A grey dragon is draining the taste out of every cup, and only Gayo beans can bring the color back.</p><p class="vq">"Flavor restored."</p>
   <button class="btn btn-yellow" type="button" data-open="2">READ VOL <b class="vnum">03</b></button></div>
 </article>
 <article class="vol reveal" data-v="3">
-  <div class="vcover polaroid"><img src="img/v4-cover.jpg" alt="IndoJack in The System Labyrinth"></div>
-  <div class="vtext"><p class="kicker">Vol <b class="vnum">04</b> · Mission</p><h3>The System Labyrinth</h3><p>From a secret roastery in Java to a maze of machines in Los Angeles, the beans need the right door.</p><p class="vq">"Fits Nespresso® Original. Click."</p>
+  <div class="vcover polaroid"><img src="img/v4-cover.jpg" alt="IndoJack in The system labyrinth"></div>
+  <div class="vtext"><p class="kicker">Vol <b class="vnum">04</b> · Mission</p><h3>The system labyrinth</h3><p>From a secret roastery in Java to a maze of machines in Los Angeles, the beans need the right door.</p><p class="vq">"Fits Nespresso® Original. Click."</p>
   <button class="btn btn-yellow" type="button" data-open="3">READ VOL <b class="vnum">04</b></button></div>
 </article>
 <article class="vol reveal" data-v="4">
-  <div class="vcover polaroid"><img src="img/v5c-cover.jpg" alt="IndoJack in Morning Mayhem"></div>
-  <div class="vtext"><p class="kicker">Vol <b class="vnum">05</b> · Survival</p><h3>Morning Mayhem</h3><p>Monday morning. Jack wakes up from a dream of dragons and mazes, and a monster is stomping through the city.</p><p class="vq">"Quest complete, espresso delivered, sanity intact."</p>
+  <div class="vcover polaroid"><img src="img/v5c-cover.jpg" alt="IndoJack in Morning mayhem"></div>
+  <div class="vtext"><p class="kicker">Vol <b class="vnum">05</b> · Survival</p><h3>Morning mayhem</h3><p>Monday morning. Jack wakes up from a dream of dragons and mazes, and a monster is stomping through the city.</p><p class="vq">"Quest complete, espresso delivered, sanity intact."</p>
   <button class="btn btn-yellow" type="button" data-open="4">READ VOL <b class="vnum">05</b></button></div>
 </article>
   </div>
@@ -876,7 +910,6 @@ body{margin:0;background:#fff}
 </svg></div>
   <div class="wlcard reveal">
     <h2>Join the waitlist</h2>
-    <p>The first 500 people on our waitlist get free shipping on their first order, plus launch-day access and tasting-note updates.</p>
     <form class="wlform" onsubmit="this.classList.add('done');return false">
       <input type="email" required placeholder="Email address" aria-label="Email address">
       <button class="btn btn-yellow" type="submit">Sign up</button>
@@ -894,7 +927,7 @@ body{margin:0;background:#fff}
 
 <footer class="torn-t">
   <div class="wrap">
-    <div class="bigrow"><p class="big fit">INDOJACK</p></div>
+    <div class="bigrow"><p class="big fit">IndoJack</p></div>
     <div class="top">
       <div><p class="join">Join the expedition</p>
         <form class="news" onsubmit="return false"><input type="email" placeholder="Email address" aria-label="Email"><button>Sign up</button></form></div>
@@ -906,7 +939,7 @@ body{margin:0;background:#fff}
 </div>
 
 <script>
-const VOLS=[{"n": "01", "tag": "Escape", "title": "The Fortress Adventure", "blurb": "IndoJack sneaks into the Overpriced Pod Fortress and walks out with something better than gold, a map to Gayo.", "quote": "Who says great crema has to cost an arm and a leg?", "cover": "v1-cover.jpg", "art": ["v1-p1.jpg", "v1-p2b.jpg", "v1-p3.jpg", "v1-p4.jpg", "v1-p5.jpg", "v1-p6.jpg"], "panels": [["Night. Jack studies a blueprint of the Overpriced Pod Fortress by lantern light, hornbill on his shoulder.", "Ten pods for how much? Not on my watch", "", "tl", "t:30:160", ""], ["Jack tiptoes down the gleaming fortress hallway while the hornbill shushes him.", "Here we go!", "Shh, act casual", "tl m40", "b:85:-40", "b:45:0", "tlj"], ["Laser beams shaped like price labels criss-cross the hall. Jack limbos under them.", "Lasers? For coffee?", "Mind the hat!", "tl", "t:14:140", "b:88:-55"], ["The vault: piles of shiny golden pods. Jack tastes one and grimaces.", "All price, no flavor", "Told you", "tr mid", "t:78:200", "t:60:180", "bl"], ["Behind the pods, an old treasure map with a red X on Sumatra marked Gayo.", "Forget the gold, THIS is the treasure", "Gayo? Pack your bags", "tr mid", "b:88:-50", "t:60:180", "tlj narrow"], ["Jack swings out of the fortress on a rope, map in his teeth, hornbill flying beside him.", "Next stop, Sumatra!", "Race you there!", "tl", "t:50:180", "b:30:0"]]}, {"n": "02", "tag": "Expedition", "title": "Back to the Jungle", "blurb": "Into the Gayo highlands, where the forest has its own guardians and the coffee has its own guardians too.", "quote": "Every great cup starts with a forest.", "cover": "v2-cover.jpg", "panels": [["Dawn. Jack's seaplane glides onto misty Lake Laut Tawar, the hills of Takengon behind.", "Finally, we're home!", "Smell that air!", "tl", "t:30:180", "b:45:0"], ["The hornbill stands on Jack's hat and points its huge beak toward the jungle trail.", "Don't worry, probably a friend", "What's that sound?", "tr", "t:15:150", "b:8:80"], ["Mount Leuser jungle. Jack comes face to face with a Sumatran tiger. Both freeze.", "Nice kitty, good kitty", "Friend, you say?", "tr", "t:40:175", "b:8:75"], ["The tiger yawns and strolls away. An orangutan on a branch laughs at Jack.", "Glad he remembers me", "", "tr hi wide", "t:60:180", ""], ["A Gayo farming family hand-picks ripe red cherries. A farmer offers Jack one.", "This is our new harvest!", "", "tr hi", "t:40:180", ""], ["Jack tastes the cherry, eyes wide, the whole family smiling.", "So good! Let's tell people about this", "", "tr hi", "t:50:180", "", "bl"]], "art": ["v2-p1.jpg", "v2-p2.jpg", "v2-p3.jpg", "v2-p4.jpg", "v2-p5.jpg", "v2-p6.jpg"], "pos": ["", "", "", "85%", "72%", "72%"]}, {"n": "03", "tag": "Flavor", "title": "The Flavor Fatigue Dragon", "blurb": "A grey dragon is draining the taste out of every cup, and only Gayo beans can bring the color back.", "quote": "Flavor restored.", "cover": "v3-cover.jpg", "panels": [["Farmers show Jack coffee beans drying on raised racks in the sun.", "It's almost ready", "Delicious!", "tl m54", "b:15:0", "b:30:0", "tlj"], ["A huge grey dragon breathes dull grey smoke over the Gayo highlands. Colors drain away.", "Oh no!", "", "", "t:75:180", "", ""], ["Jack loads a slingshot with a handful of roasted Gayo beans.", "You're not getting away!", "", "", "t:50:180", "", ""], ["The beans fly straight into the dragon's open mouth.", "Open wide!", "", "", "b:70:0", "", "rmid"], ["The dragon turns warm brown and gold, colors flood back into the hills.", "Yummy!", "", "", "b:4:78", "", "trj"], ["Now friendly, the dragon flies Jack over the Gayo hills at sunset.", "We're friends now", "Best ride ever!", "tr mid", "b:6:75", "t:70:180", "trj"]], "art": ["v3-p2.jpg", "v3-p1.jpg", "v3-p3.jpg", "v3-p4.jpg", "v3-p5.jpg", "v3-p6.jpg"], "pos": ["", "", "75%", "80%", "", "85%"]}, {"n": "04", "tag": "Mission", "title": "The System Labyrinth", "blurb": "From a secret roastery in Java to a maze of machines in Los Angeles, the beans need the right door.", "quote": "Fits Nespresso® Original. Click.", "cover": "v4-cover.jpg", "panels": [["A secret roastery in Java. Beans are roasted, ground and sealed into pods.", "Seal them fresh", "Smells like home!", "tl m40", "t:70:180", "t:20:180", ""], ["Jack flies a cargo plane full of pods from Indonesia toward Los Angeles.", "Indonesia to Los Angeles, coffees on board", "", "", "b:15:40", "", "trj"], ["Los Angeles: a giant maze built from coffee machines, doors everywhere.", "Which way?", "This way!", "bwr", "b:30:0", "b:6:75", "tlj"], ["A tall door is chained and padlocked. The pod doesn't fit. Jack shrugs.", "Oh no! Can't win them all", "Not our door", "tr", "t:30:180", "b:70:0", "bl"], ["Around the corner, a round door with a pod-shaped slot. The pod slides in perfectly and the door opens.", "Click, perfect fit", "Try this one!", "tr", "t:10:140", "b:8:55", ""], ["Jack plants a flag on top of the maze.", "Mission complete!", "We made it!", "tr mid", "b:90:-40", "t:75:180", "tlj"]], "art": ["v4-p1.jpg", "v4-p2.jpg", "v4-p3.jpg", "v4-p5b.jpg", "v4-p4.jpg", "v4-p6.jpg"]}, {"n": "05", "tag": "Survival", "title": "Morning Mayhem", "blurb": "Monday morning. Jack wakes up from a dream of dragons and mazes, and a monster is stomping through the city.", "quote": "Quest complete, espresso delivered, sanity intact.", "cover": "v5c-cover.jpg", "panels": [["Jack sleeps in his pajamas, dreaming of riding the dragon to the maze.", "", "", "", "", "", "bl"], ["Monday morning. The hornbill wakes Jack, something is rumbling outside.", "On a Monday?", "Jack, wake up! Something's outside!", "blb", "b:20:30", "t:30:180", "trj"], ["From the window, Jack spots the Monday Monster stomping through the city.", "The Monday Monster!", "It's huge!", "tr hi", "t:55:180", "b:75:0", ""], ["Jack fires his slingshot from the balcony, coffee beans straight into the monster's mouth.", "Espresso is served!", "Bullseye!", "tr m40", "b:20:40", "b:60:0", "trj"], ["The monster turns happy and calm and leans in at Jack's window.", "Yummy!", "He likes it!", "tr hi", "b:40:0", "b:65:0", "tlj"], ["Jack, the monster and the hornbill all sip their coffee together.", "Sanity intact", "", "", "b:70:0", "", "trj"]], "art": ["v5b-p1.jpg", "v5b-p2.jpg", "v5c-p3.jpg", "v5c-p4.jpg", "v5c-p5.jpg", "v5c-p6.jpg"], "pos": ["", "", "78%", "85%", "85%", ""]}];
+const VOLS=[{"n": "01", "tag": "Escape", "title": "The fortress adventure", "blurb": "IndoJack sneaks into the Overpriced Pod Fortress and walks out with something better than gold, a map to Gayo.", "quote": "Who says great crema has to cost an arm and a leg?", "cover": "v1-cover.jpg", "art": ["v1-p1.jpg", "v1-p2b.jpg", "v1-p3.jpg", "v1-p4.jpg", "v1-p5.jpg", "v1-p6.jpg"], "panels": [["Night. Jack studies a blueprint of the Overpriced Pod Fortress by lantern light, hornbill on his shoulder.", "Ten pods for how much? Not on my watch", "", "tl", "t:30:160", ""], ["Jack tiptoes down the gleaming fortress hallway while the hornbill shushes him.", "Here we go!", "Shh, act casual", "tl m40", "b:85:-40", "b:45:0", "tlj"], ["Laser beams shaped like price labels criss-cross the hall. Jack limbos under them.", "Lasers? For coffee?", "Mind the hat!", "tl", "t:14:140", "b:88:-55"], ["The vault: piles of shiny golden pods. Jack tastes one and grimaces.", "All price, no flavor", "Told you", "tr mid", "t:78:200", "t:60:180", "bl"], ["Behind the pods, an old treasure map with a red X on Sumatra marked Gayo.", "Forget the gold, THIS is the treasure", "Gayo? Pack your bags", "tr mid", "b:88:-50", "t:60:180", "tlj narrow"], ["Jack swings out of the fortress on a rope, map in his teeth, hornbill flying beside him.", "Next stop, Sumatra!", "Race you there!", "tl", "t:50:180", "b:30:0"]]}, {"n": "02", "tag": "Expedition", "title": "Back to the jungle", "blurb": "Into the Gayo highlands, where the forest has its own guardians and the coffee has its own guardians too.", "quote": "Every great cup starts with a forest.", "cover": "v2-cover.jpg", "panels": [["Dawn. Jack's seaplane glides onto misty Lake Laut Tawar, the hills of Takengon behind.", "Finally, we're home!", "Smell that air!", "tl", "t:30:180", "b:45:0"], ["The hornbill stands on Jack's hat and points its huge beak toward the jungle trail.", "Don't worry, probably a friend", "What's that sound?", "tr", "t:15:150", "b:8:80"], ["Mount Leuser jungle. Jack comes face to face with a Sumatran tiger. Both freeze.", "Nice kitty, good kitty", "Friend, you say?", "tr", "t:40:175", "b:8:75"], ["The tiger yawns and strolls away. An orangutan on a branch laughs at Jack.", "Glad he remembers me", "", "tr hi wide", "t:60:180", ""], ["A Gayo farming family hand-picks ripe red cherries. A farmer offers Jack one.", "This is our new harvest!", "", "tr hi", "t:40:180", ""], ["Jack tastes the cherry, eyes wide, the whole family smiling.", "So good! Let's tell people about this", "", "tr hi", "t:50:180", "", "bl"]], "art": ["v2-p1.jpg", "v2-p2.jpg", "v2-p3.jpg", "v2-p4.jpg", "v2-p5.jpg", "v2-p6.jpg"], "pos": ["", "", "", "85%", "72%", "72%"]}, {"n": "03", "tag": "Flavor", "title": "The flavor fatigue dragon", "blurb": "A grey dragon is draining the taste out of every cup, and only Gayo beans can bring the color back.", "quote": "Flavor restored.", "cover": "v3-cover.jpg", "panels": [["Farmers show Jack coffee beans drying on raised racks in the sun.", "It's almost ready", "Delicious!", "tl m54", "b:15:0", "b:30:0", "tlj"], ["A huge grey dragon breathes dull grey smoke over the Gayo highlands. Colors drain away.", "Oh no!", "", "", "t:75:180", "", ""], ["Jack loads a slingshot with a handful of roasted Gayo beans.", "You're not getting away!", "", "", "t:50:180", "", ""], ["The beans fly straight into the dragon's open mouth.", "Open wide!", "", "", "b:70:0", "", "rmid"], ["The dragon turns warm brown and gold, colors flood back into the hills.", "Yummy!", "", "", "b:4:78", "", "trj"], ["Now friendly, the dragon flies Jack over the Gayo hills at sunset.", "We're friends now", "Best ride ever!", "tr mid", "b:6:75", "t:70:180", "trj"]], "art": ["v3-p2.jpg", "v3-p1.jpg", "v3-p3.jpg", "v3-p4.jpg", "v3-p5.jpg", "v3-p6.jpg"], "pos": ["", "", "75%", "80%", "", "85%"]}, {"n": "04", "tag": "Mission", "title": "The system labyrinth", "blurb": "From a secret roastery in Java to a maze of machines in Los Angeles, the beans need the right door.", "quote": "Fits Nespresso® Original. Click.", "cover": "v4-cover.jpg", "panels": [["A secret roastery in Java. Beans are roasted, ground and sealed into pods.", "Seal them fresh", "Smells like home!", "tl m40", "t:70:180", "t:20:180", ""], ["Jack flies a cargo plane full of pods from Indonesia toward Los Angeles.", "Indonesia to Los Angeles, coffees on board", "", "", "b:15:40", "", "trj"], ["Los Angeles: a giant maze built from coffee machines, doors everywhere.", "Which way?", "This way!", "bwr", "b:30:0", "b:6:75", "tlj"], ["A tall door is chained and padlocked. The pod doesn't fit. Jack shrugs.", "Oh no! Can't win them all", "Not our door", "tr", "t:30:180", "b:70:0", "bl"], ["Around the corner, a round door with a pod-shaped slot. The pod slides in perfectly and the door opens.", "Click, perfect fit", "Try this one!", "tr", "t:10:140", "b:8:55", ""], ["Jack plants a flag on top of the maze.", "Mission complete!", "We made it!", "tr mid", "b:90:-40", "t:75:180", "tlj"]], "art": ["v4-p1.jpg", "v4-p2.jpg", "v4-p3.jpg", "v4-p5b.jpg", "v4-p4.jpg", "v4-p6.jpg"]}, {"n": "05", "tag": "Survival", "title": "Morning mayhem", "blurb": "Monday morning. Jack wakes up from a dream of dragons and mazes, and a monster is stomping through the city.", "quote": "Quest complete, espresso delivered, sanity intact.", "cover": "v5c-cover.jpg", "panels": [["Jack sleeps in his pajamas, dreaming of riding the dragon to the maze.", "", "", "", "", "", "bl"], ["Monday morning. The hornbill wakes Jack, something is rumbling outside.", "On a Monday?", "Jack, wake up! Something's outside!", "blb", "b:20:30", "t:30:180", "trj"], ["From the window, Jack spots the Monday Monster stomping through the city.", "The Monday Monster!", "It's huge!", "tr hi", "t:55:180", "b:75:0", ""], ["Jack fires his slingshot from the balcony, coffee beans straight into the monster's mouth.", "Espresso is served!", "Bullseye!", "tr m40", "b:20:40", "b:60:0", "trj"], ["The monster turns happy and calm and leans in at Jack's window.", "Yummy!", "He likes it!", "tr hi", "b:40:0", "b:65:0", "tlj"], ["Jack, the monster and the hornbill all sip their coffee together.", "Sanity intact", "", "", "b:70:0", "", "trj"]], "art": ["v5b-p1.jpg", "v5b-p2.jpg", "v5c-p3.jpg", "v5c-p4.jpg", "v5c-p5.jpg", "v5c-p6.jpg"], "pos": ["", "", "78%", "85%", "85%", ""]}];
 (function(){
   document.querySelectorAll('#ij .ahero h1 .w').forEach((w,i)=>w.style.transitionDelay=(i*.14)+'s');
   requestAnimationFrame(()=>setTimeout(()=>document.querySelector('#ij .ahero').classList.add('go'),250));
@@ -943,5 +976,7 @@ const VOLS=[{"n": "01", "tag": "Escape", "title": "The Fortress Adventure", "blu
 })();
 </script>
 <script src="hornbill.js"></script>
+<script>document.documentElement.setAttribute("data-hf","lucky")</script>
+</div>
 </body>
 </html>

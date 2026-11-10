@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-hf="lucky">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IndoJack Coffee — Homepage Mockup</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Bangers&family=Acme&family=Instrument+Serif&family=Cormorant+Garamond:wght@500&family=Newsreader:opsz,wght@6..72,300&family=Libre+Caslon+Display&family=DM+Serif+Display&family=Playfair+Display:wght@400&family=Mulish:wght@300;400&family=Outfit:wght@300;400;600&family=Jost:wght@300;400&family=Inter:wght@300;400&family=Josefin+Sans:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Bangers&family=Acme&family=Rye&family=Luckiest+Guy&family=Instrument+Serif&family=Cormorant+Garamond:wght@500&family=Newsreader:opsz,wght@6..72,300&family=Libre+Caslon+Display&family=DM+Serif+Display&family=Playfair+Display:wght@400&family=Mulish:wght@300;400&family=Outfit:wght@300;400;600&family=Jost:wght@300;400&family=Inter:wght@300;400&family=Josefin+Sans:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:"IndoJack Logo";src:url("fonts/IndoJackLogo-Regular.woff2") format("woff2"),url("fonts/IndoJackLogo-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro-bold.ttf) format('truetype');font-weight:700;font-style:normal}
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro-bolditalic.ttf) format('truetype');font-weight:700;font-style:italic}
@@ -50,7 +52,7 @@ body{margin:0;background:#fff}
 #ij .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,4,.55) 0%,rgba(20,12,4,0) 22%,rgba(20,12,4,0) 55%,rgba(20,12,4,.65) 100%);pointer-events:none}
 #ij .nav{position:absolute;top:0;left:0;right:0;z-index:8;display:flex;align-items:center;justify-content:space-between;padding:24px var(--g);padding-left:var(--left-g)}
 #ij .logo{font-family:var(--serif);font-size:1.7rem;text-decoration:none;color:#fff;line-height:1}
-#ij .logo img{display:block;height:clamp(58px,5.6vw,92px);width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+#ij .logo img{display:block;height:clamp(40px,3.6vw,58px);width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
 #ij .nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;position:absolute;left:50%;transform:translateX(-50%)}
 /* menu buttons wear the comic caption box */
 #ij .nav ul a{display:inline-block;background:var(--comic);color:#111;border:2.5px solid #111;box-shadow:3px 3px 0 #111;padding:7px 14px;
@@ -189,10 +191,10 @@ body{margin:0;background:#fff}
 @keyframes mvCompass{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
 #ij .ijanim::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(rgba(110,70,30,.42),rgba(110,70,30,0) 70px,rgba(110,70,30,0) calc(100% - 70px),rgba(110,70,30,.42))}
-#ij .ij-row{position:relative;z-index:2;display:grid;grid-template-columns:1fr;justify-items:center;align-items:center;gap:1vw;padding:0 var(--g);padding-left:var(--left-g)}
+#ij .ij-row{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1.5vw;padding:0 var(--g);padding-left:var(--left-g)}
 #ij .ij-word{font-family:var(--hand);font-style:italic;font-weight:700;font-size:16vw;line-height:.9;color:var(--comic);-webkit-text-stroke:.03em #111;paint-order:stroke fill;text-shadow:.04em .04em 0 #000;white-space:nowrap;will-change:transform}
 #ij .ij-word.l{justify-self:end}#ij .ij-word.r{justify-self:start}
-#ij .morph{position:relative;width:clamp(180px,22vw,340px);aspect-ratio:1}
+#ij .morph{position:relative;width:clamp(200px,24vw,380px);aspect-ratio:1}
 #ij .morph-item{position:absolute;inset:0;display:grid;place-items:center;transform:scale(0) rotate(-160deg);opacity:0;transition:transform .65s cubic-bezier(.3,1.45,.5,1),opacity .25s}
 #ij .morph-item.on{transform:none;opacity:1}
 #ij .morph-item img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 22px rgba(60,36,18,.22));animation:float 5s ease-in-out infinite}
@@ -465,6 +467,39 @@ body{margin:0;background:#fff}
   #ij .nav.open .burger{position:absolute;top:22px;right:7vw;font-size:1.8rem}
 }
 @media (prefers-reduced-motion:reduce){#ij *{animation:none!important;transition:none!important}#ij .reveal{opacity:1;transform:none}#ij .hero h1 .w{transform:none}}
+
+/* 2026-11-10: IndoJack Logo font for every headline; sentence case except the Home video headline */
+#ij h1,#ij h2,#ij h3,#ij .serif,#ij .plan-name,#ij .price,#ij footer .big,#ij .ij-word,#ij .ctitle b,#ij footer .join{font-family:"IndoJack Logo",'Acme',cursive!important;font-weight:400!important;font-style:normal!important}
+#ij h1,#ij h2,#ij h3,#ij .bhero h1,#ij .ahero h1,#ij .ctitle b,#ij .plan-name{text-transform:none!important}
+#ij h1 em,#ij h2 em,#ij h3 em{font-style:normal}
+#ij .hero h1{text-transform:uppercase!important;font-size:clamp(2.1rem,5.2vw,5rem)!important}
+
+/* 2026-11-10 headline font switcher (review only) */
+html[data-hf="acme"] #ij h1,html[data-hf="acme"] #ij h1 .w,html[data-hf="acme"] #ij h2,html[data-hf="acme"] #ij h3,html[data-hf="acme"] #ij .serif,html[data-hf="acme"] #ij .plan-name,html[data-hf="acme"] #ij .price,html[data-hf="acme"] #ij footer .big,html[data-hf="acme"] #ij .ij-word,html[data-hf="acme"] #ij .ctitle b,html[data-hf="acme"] #ij footer .join{font-family:'Acme','Comic Sans MS',cursive!important;font-style:italic!important;font-weight:700!important}
+html[data-hf="rye"] #ij h1,html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join{font-family:'Rye',serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:.01em}
+html[data-hf="lucky"] #ij h1,html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{font-family:'Luckiest Guy',cursive!important;font-style:normal!important;font-weight:400!important;letter-spacing:.02em}
+html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join,html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{background:linear-gradient(180deg,#FDCF2D 0%,#FDC724 25%,#FDBD1C 50%,#FDA911 75%,#FD9B09 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;-webkit-text-stroke:.045em #6B1803!important;paint-order:stroke fill;text-shadow:none!important;filter:drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #2E0702)}
+html[data-hf="rye"] #ij h1 em,html[data-hf="rye"] #ij h2 em,html[data-hf="rye"] #ij h3 em,html[data-hf="lucky"] #ij h1 em,html[data-hf="lucky"] #ij h2 em,html[data-hf="lucky"] #ij h3 em{-webkit-text-fill-color:transparent!important;color:transparent!important}
+.hfpick{position:fixed;left:16px;bottom:16px;z-index:99999;background:#fff;border:2.5px solid #111;box-shadow:3px 3px 0 #111;padding:8px 10px;font:600 13px/1.2 'Josefin Sans',sans-serif;color:#111}
+.hfpick label{display:block;margin:0 0 5px;letter-spacing:.04em;text-transform:uppercase;font-size:11px}
+.hfpick select{font:inherit;padding:5px 6px;border:1.5px solid #111;background:#fff;min-height:36px}
+
+/* 2026-11-10: Luckiest Guy chosen; hero headline italic like the logo; no clipped tops */
+html[data-hf] #ij h1 .line{padding-top:.2em!important;padding-bottom:.16em!important;margin-top:-.2em!important;margin-bottom:-.16em!important;padding-left:.08em!important;padding-right:.3em!important}
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h1 em{font-style:italic!important}
+
+/* 2026-11-10: every headline italic with Luckiest Guy */
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h1 em,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij h2 em,html[data-hf="lucky"] #ij h3 em,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{font-style:italic!important}
+
+/* 2026-11-10: keep the gold fill under slanted letters (gradient box must cover the italic overhang) */
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join,html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join{padding-right:.35em!important;margin-right:-.35em!important;padding-top:.12em!important;padding-bottom:.1em!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* 2026-11-10: breathing room under headings */
+html[data-hf] #ij .wlcard h2{margin-bottom:28px!important}
+html[data-hf] #ij footer .join{margin-bottom:26px!important}
+html[data-hf] #ij .plans h2{margin-bottom:44px!important}
+html[data-hf] #ij .faq h2{margin-bottom:56px!important}
+#ij .jnw{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -475,7 +510,7 @@ body{margin:0;background:#fff}
   <img class="poster" src="img/hero-poster.jpg" alt="">
   <video id="heroVid" autoplay muted loop playsinline poster="img/hero-poster.jpg"><source src="hero.mp4" type="video/mp4"></video>
   <nav class="nav" id="ijnav">
-    <a class="logo" href="#top"><img src="img/logo-indojack-v3.svg" alt="IndoJack Coffee"></a>
+    <a class="logo" href="#top"><img src="img/logo-indojack-sign.png" alt="IndoJack Coffee"></a>
     <ul>
       <li><a href="beans.html">The Beans</a></li>
       <li><a href="adventure.html">The Adventure</a></li>
@@ -510,7 +545,7 @@ body{margin:0;background:#fff}
   <div class="media slides polaroid"><img class="on" src="img/s1-farmer.jpg" alt="An Indonesian farmer sorting ripe red coffee cherries in woven trays"></div>
   <div class="text reveal">
     <p class="kicker">Bold · Fruity · Sweet</p>
-    <h2>Single-Origin Sumatra</h2>
+    <h2>Single-origin Sumatra</h2>
     <p>Did you know Indonesia is the no. 4 coffee producer in the world? High in the mountains of Sumatra, our coffee grows in rich volcanic soil, more than 1,000 meters above the sea. The local families grow it with care, picking the ripe cherries by hand for more than a century and passing the craft from one generation to the next.</p>
     <p>IndoJack carefully selected these beans for their heritage flavor. You'll taste complex, fruity notes, a sweet finish and a smooth, full body, the very qualities Sumatra fans keep coming back for. We're run by Indonesian locals, proudly sharing this authenticity with you, shipped fresh from Indonesia to the world.</p>
   </div>
@@ -520,7 +555,7 @@ body{margin:0;background:#fff}
 <section class="split exp">
   <div class="text reveal">
     <p class="kicker">Simple · Fresh · Authentic</p>
-    <h2>Nespresso<sup class="tm">®</sup>-Compatible Pods</h2>
+    <h2>Nespresso<sup class="tm">®</sup>-compatible pods</h2>
     <p>Enjoy the authentic taste of tropical coffee, straight from the sunny island of Indonesia. Our pods work with your Nespresso® OriginalLine machine with no extra steps. Pop one in, press the button, and a little adventure is in your cup in seconds. For us, that bold, sweet, fruity finish is worth every mile across the ocean. It shines as a short espresso, a long cup or with a splash of milk.</p>
     <p>Each pod holds 5.1 grams of 100% single-origin Arabica, medium roasted and sealed in food-grade aluminum to lock in its full aroma. You'll find 10 pods in every box, each sealed to stay fresh until the moment you brew it. They are roasted, processed and certified with ISO to meet international standards, so you will always taste the best coffee every morning.</p>
     <p class="fine">*Nespresso® is a registered trademark of Société des Produits Nestlé S.A., and is not affiliated with IndoJack Coffee.</p>
@@ -570,6 +605,7 @@ body{margin:0;background:#fff}
   </svg>
   <span class="hb-flyer" data-hb="fly"></span>
   <div class="ij-row">
+    <div class="ij-word l" data-dx="-1">Indo</div>
     <div class="morph" id="morph">
       <div class="morph-item on"><img src="img/obj-capsule.png" alt="Coffee pod"></div>
       <div class="morph-item"><img src="img/obj-beans.png" alt="Roasted coffee beans"></div>
@@ -577,7 +613,7 @@ body{margin:0;background:#fff}
       <div class="morph-item"><img src="img/obj-cherry-real.png" alt="Ripe red coffee cherries"></div>
       <div class="morph-item"><img src="img/obj-cup.png" alt="Espresso in a clear glass cup"></div>
     </div>
-    <div class="ij-word one" data-dx="-1">INDOJACK</div>
+    <div class="ij-word r" data-dx="1">Jack</div>
   </div>
 </section>
 <div class="seam bw"></div>
@@ -592,7 +628,6 @@ body{margin:0;background:#fff}
       </div>
       <div class="taste reveal">
         <h2>Sumatra Gayo<span class="perch-swap" data-hb="perch"></span></h2>
-        <h3>How it tastes</h3>
         <ul class="notes-row"><li><i style="background:#5C391E"></i>Bold</li><li><i style="background:#C0392B"></i>Fruity</li><li><i style="background:#F6E27A"></i>Sweet</li></ul>
         <p class="say-it">You'll taste a fruity aroma and a sweet, complex flavor from single-origin Arabica grown high in Sumatra</p>
         <div class="facts">
@@ -639,8 +674,7 @@ body{margin:0;background:#fff}
       <h2>Subscriptions<br>make it easy</h2>
       <p class="lead">Experience great coffee from home, all the time.</p>
       <div class="step"><span class="n">01</span><div><h3>Customize</h3><p>Choose your box, or pre-order The Annual Expedition, delivered in 4 shipments of 6 boxes, one every 3 months.</p></div></div>
-      <div class="step"><span class="n">02</span><div><h3>Free Shipping</h3><p>The first 500 people on our waitlist get free shipping on their first order.</p></div></div>
-      <div class="step"><span class="n">03</span><div><h3>Enjoy</h3><p>Experience the freshest roasted coffee right to you, and receive launch-day access and tasting-note updates.</p></div></div>
+      <div class="step"><span class="n">02</span><div><h3>Enjoy</h3><p>Experience the freshest roasted coffee right to you, and receive launch-day access and tasting-note updates.</p></div></div>
     </div>
     <div class="photo polaroid"><img src="img/sub-box-logo.jpg" alt="Hands holding a white IndoJack Coffee box"><span class="illus">Illustration only, need photoshoot</span></div>
   </div>
@@ -654,7 +688,7 @@ body{margin:0;background:#fff}
       <span class="flag">Best deal</span>
       <div class="pic"><img src="img/sub-box-logo.jpg" alt="Hands holding a white IndoJack Coffee box" style="object-position:58% 45%"><span class="illus">Illustration only, need photoshoot</span></div>
       <div class="info">
-        <h3 class="plan-name">The Annual Expedition</h3>
+        <h3 class="plan-name">The annual expedition</h3>
         <p class="plan-sub">Yearly subscription</p>
         <p class="price">$237 <small>/ year</small></p>
         <p class="meta">About $9.88 per box · first delivery estimated February 2027</p>
@@ -668,13 +702,13 @@ body{margin:0;background:#fff}
     </div>
     <div class="trio">
       <div class="tier dark reveal"><div class="sq"><img src="img/pack-2.jpg" alt=""><span class="illus">Illustration only, need photoshoot</span></div>
-        <div class="in"><h3 class="plan-name">The Scout Haul</h3><p class="plan-sub">Recon run</p><p class="price">$24</p>
+        <div class="in"><h3 class="plan-name">The scout haul</h3><p class="plan-sub">Recon run</p><p class="price">$24</p>
         <ul class="ticks"><li><b>20</b> Single-Origin Pods</li><li>2 Boxes · Sumatran Arabica</li></ul><a class="btn btn-yellow" href="https://buy.stripe.com/7sYeVc5dmg582b259If7i00">PRE-ORDER</a></div></div>
       <div class="tier pop dark reveal"><div class="sq"><img src="img/plan-fortress.jpg" alt=""><span class="illus">Illustration only, need photoshoot</span></div>
-        <div class="in"><h3 class="plan-name">The Fortress Raid</h3><p class="plan-sub">Daily drinker</p><p class="price">$48</p>
+        <div class="in"><h3 class="plan-name">The fortress raid</h3><p class="plan-sub">Daily drinker</p><p class="price">$48</p>
         <ul class="ticks"><li><b>40</b> Single-Origin Pods</li><li>4 Boxes · Daily Espresso Supply</li></ul><a class="btn btn-yellow" href="https://buy.stripe.com/4gM4gy21abOSeXOcCaf7i01">PRE-ORDER</a></div></div>
       <div class="tier dark reveal"><div class="sq"><img src="img/plan-legend.jpg" alt=""><span class="illus">Illustration only, need photoshoot</span></div>
-        <div class="in"><h3 class="plan-name">The Legend Stash</h3><p class="plan-sub">Private reserve</p><p class="price">$72</p>
+        <div class="in"><h3 class="plan-name">The legend stash</h3><p class="plan-sub">Private reserve</p><p class="price">$72</p>
         <ul class="ticks"><li><b>60</b> Single-Origin Pods</li><li>6 Boxes · Biggest Stash</li></ul><a class="btn btn-yellow" href="https://buy.stripe.com/4gMfZgbBK06a16Y7hQf7i02">PRE-ORDER</a></div></div>
     </div>
   </div>
@@ -698,7 +732,7 @@ body{margin:0;background:#fff}
 <!-- 10 · FOOTER -->
 <footer class="torn-t">
   <div class="wrap">
-    <div class="bigrow"><p class="big fit">INDOJACK</p></div>
+    <div class="bigrow"><p class="big fit">IndoJack</p></div>
     <div class="top">
       <div><p class="join">Join the expedition</p>
         <form class="news" onsubmit="return false"><input type="email" placeholder="Email address" aria-label="Email"><button>Sign up</button></form></div>
@@ -782,9 +816,10 @@ body{margin:0;background:#fff}
   function fit(){
     jackFit();glassFit();
     const row=document.querySelector('#ij .ij-row'),m=document.getElementById('morph'),ws=[...row.querySelectorAll('.ij-word')];
-    {const pad=parseFloat(getComputedStyle(row).paddingLeft)+parseFloat(getComputedStyle(row).paddingRight);
-      const avail=row.clientWidth-pad;ws.forEach(w=>w.style.fontSize='100px');
-      const fs=Math.min(...ws.map(w=>100*avail/w.scrollWidth))*.92;ws.forEach(w=>w.style.fontSize=fs+'px')}
+    if(innerWidth>900){const gap=parseFloat(getComputedStyle(row).columnGap)||0,pad=parseFloat(getComputedStyle(row).paddingLeft)+parseFloat(getComputedStyle(row).paddingRight);
+      const avail=(row.clientWidth-pad-m.offsetWidth-gap*2)/2;ws.forEach(w=>w.style.fontSize='100px');
+      const fs=Math.min(...ws.map(w=>100*avail/w.scrollWidth))*.88;ws.forEach(w=>w.style.fontSize=fs+'px')}
+    else ws.forEach(w=>w.style.fontSize='24vw');
     document.querySelectorAll('#ij footer .fit').forEach(el=>{const W=el.parentElement.clientWidth;el.style.fontSize='100px';el.style.display='inline-block';const w=el.scrollWidth;el.style.display='block';el.style.textAlign='center';el.style.fontSize=(100*W/w*.65)+'px'});
   }
   document.fonts.ready.then(fit);document.fonts.addEventListener('loadingdone',fit);addEventListener('resize',fit);fit();
@@ -800,7 +835,7 @@ body{margin:0;background:#fff}
     plx.forEach(img=>{const r=img.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
       img.style.transform='translateY('+((r.top+r.height/2-vh/2)/vh*-48)+'px)'});
     const r=sec.getBoundingClientRect();
-    if(r.bottom>0&&r.top<vh){const p=(r.top+r.height/2-vh/2)/vh;words.forEach(w=>w.style.transform='translateX('+(p*w.dataset.dx*-30)+'px)');
+    if(r.bottom>0&&r.top<vh){const p=(r.top+r.height/2-vh/2)/vh;words.forEach(w=>w.style.transform='translateX('+(p*w.dataset.dx*-50)+'px)');
       const ms=sec.querySelector('.mapsvg'),o=Math.max(-70,Math.min(70,p*-70));ms.style.transform=innerWidth>900?'translateY(calc(-50% + '+o+'px))':'translate(-50%,'+o+'px)'}
   }
   addEventListener('scroll',()=>requestAnimationFrame(tick),{passive:true});addEventListener('resize',tick);tick();
@@ -834,5 +869,7 @@ body{margin:0;background:#fff}
 })();
 </script>
 <script src="hornbill.js"></script>
+<script>document.documentElement.setAttribute("data-hf","lucky")</script>
+</div>
 </body>
 </html>

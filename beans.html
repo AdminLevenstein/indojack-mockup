@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-hf="lucky">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Beans — IndoJack Coffee Mockup</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Bangers&family=Acme&family=Instrument+Serif&family=Cormorant+Garamond:wght@500&family=Newsreader:opsz,wght@6..72,300&family=Libre+Caslon+Display&family=DM+Serif+Display&family=Playfair+Display:wght@400&family=Mulish:wght@300;400&family=Outfit:wght@300;400;600&family=Jost:wght@300;400&family=Inter:wght@300;400&family=Josefin+Sans:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Bangers&family=Acme&family=Rye&family=Luckiest+Guy&family=Instrument+Serif&family=Cormorant+Garamond:wght@500&family=Newsreader:opsz,wght@6..72,300&family=Libre+Caslon+Display&family=DM+Serif+Display&family=Playfair+Display:wght@400&family=Mulish:wght@300;400&family=Outfit:wght@300;400;600&family=Jost:wght@300;400&family=Inter:wght@300;400&family=Josefin+Sans:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:"IndoJack Logo";src:url("fonts/IndoJackLogo-Regular.woff2") format("woff2"),url("fonts/IndoJackLogo-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro-bold.ttf) format('truetype');font-weight:700;font-style:normal}
 @font-face{font-family:'Adam Warren Pro';src:url(fonts/adamwarrenpro-bolditalic.ttf) format('truetype');font-weight:700;font-style:italic}
@@ -50,7 +52,7 @@ body{margin:0;background:#fff}
 #ij .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,4,.55) 0%,rgba(20,12,4,0) 22%,rgba(20,12,4,0) 55%,rgba(20,12,4,.65) 100%);pointer-events:none}
 #ij .nav{position:absolute;top:0;left:0;right:0;z-index:8;display:flex;align-items:center;justify-content:space-between;padding:24px var(--g);padding-left:var(--left-g)}
 #ij .logo{font-family:var(--serif);font-size:1.7rem;text-decoration:none;color:#fff;line-height:1}
-#ij .logo img{display:block;height:clamp(58px,5.6vw,92px);width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+#ij .logo img{display:block;height:clamp(40px,3.6vw,58px);width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
 #ij .nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;position:absolute;left:50%;transform:translateX(-50%)}
 /* menu buttons wear the comic caption box */
 #ij .nav ul a{display:inline-block;background:var(--comic);color:#111;border:2.5px solid #111;box-shadow:3px 3px 0 #111;padding:7px 14px;
@@ -644,6 +646,38 @@ body{margin:0;background:#fff}
 #ij .jack-inline{display:inline-block;height:.82em;width:auto;vertical-align:-.02em;margin-left:.18em;animation:jackNod 3s ease-in-out infinite;transform-origin:50% 100%}
 @keyframes jackNod{0%,100%{transform:rotate(0)}50%{transform:rotate(-6deg)}}
 @media (max-width:900px){#ij .jack-big{flex:none;height:220px}#ij .sgrid{grid-template-columns:1fr;gap:30px}#ij .report{margin-top:0!important}#ij .dfly{display:none}}
+
+/* 2026-11-10: IndoJack Logo font for every headline; sentence case except the Home video headline */
+#ij h1,#ij h2,#ij h3,#ij .serif,#ij .plan-name,#ij .price,#ij footer .big,#ij .ij-word,#ij .ctitle b,#ij footer .join{font-family:"IndoJack Logo",'Acme',cursive!important;font-weight:400!important;font-style:normal!important}
+#ij h1,#ij h2,#ij h3,#ij .bhero h1,#ij .ahero h1,#ij .ctitle b,#ij .plan-name{text-transform:none!important}
+#ij h1 em,#ij h2 em,#ij h3 em{font-style:normal}
+
+/* 2026-11-10 headline font switcher (review only) */
+html[data-hf="acme"] #ij h1,html[data-hf="acme"] #ij h1 .w,html[data-hf="acme"] #ij h2,html[data-hf="acme"] #ij h3,html[data-hf="acme"] #ij .serif,html[data-hf="acme"] #ij .plan-name,html[data-hf="acme"] #ij .price,html[data-hf="acme"] #ij footer .big,html[data-hf="acme"] #ij .ij-word,html[data-hf="acme"] #ij .ctitle b,html[data-hf="acme"] #ij footer .join{font-family:'Acme','Comic Sans MS',cursive!important;font-style:italic!important;font-weight:700!important}
+html[data-hf="rye"] #ij h1,html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join{font-family:'Rye',serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:.01em}
+html[data-hf="lucky"] #ij h1,html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{font-family:'Luckiest Guy',cursive!important;font-style:normal!important;font-weight:400!important;letter-spacing:.02em}
+html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join,html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{background:linear-gradient(180deg,#FDCF2D 0%,#FDC724 25%,#FDBD1C 50%,#FDA911 75%,#FD9B09 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;-webkit-text-stroke:.045em #6B1803!important;paint-order:stroke fill;text-shadow:none!important;filter:drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #3A0601) drop-shadow(.02em .02em 0 #2E0702)}
+html[data-hf="rye"] #ij h1 em,html[data-hf="rye"] #ij h2 em,html[data-hf="rye"] #ij h3 em,html[data-hf="lucky"] #ij h1 em,html[data-hf="lucky"] #ij h2 em,html[data-hf="lucky"] #ij h3 em{-webkit-text-fill-color:transparent!important;color:transparent!important}
+.hfpick{position:fixed;left:16px;bottom:16px;z-index:99999;background:#fff;border:2.5px solid #111;box-shadow:3px 3px 0 #111;padding:8px 10px;font:600 13px/1.2 'Josefin Sans',sans-serif;color:#111}
+.hfpick label{display:block;margin:0 0 5px;letter-spacing:.04em;text-transform:uppercase;font-size:11px}
+.hfpick select{font:inherit;padding:5px 6px;border:1.5px solid #111;background:#fff;min-height:36px}
+
+/* 2026-11-10: Luckiest Guy chosen; hero headline italic like the logo; no clipped tops */
+html[data-hf] #ij h1 .line{padding-top:.2em!important;padding-bottom:.16em!important;margin-top:-.2em!important;margin-bottom:-.16em!important;padding-left:.08em!important;padding-right:.3em!important}
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h1 em{font-style:italic!important}
+
+/* 2026-11-10: every headline italic with Luckiest Guy */
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h1 em,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij h2 em,html[data-hf="lucky"] #ij h3 em,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join{font-style:italic!important}
+
+/* 2026-11-10: keep the gold fill under slanted letters (gradient box must cover the italic overhang) */
+html[data-hf="lucky"] #ij h1 .w,html[data-hf="lucky"] #ij h2,html[data-hf="lucky"] #ij h3,html[data-hf="lucky"] #ij .serif,html[data-hf="lucky"] #ij .plan-name,html[data-hf="lucky"] #ij .price,html[data-hf="lucky"] #ij footer .big,html[data-hf="lucky"] #ij .ij-word,html[data-hf="lucky"] #ij .ctitle b,html[data-hf="lucky"] #ij footer .join,html[data-hf="rye"] #ij h1 .w,html[data-hf="rye"] #ij h2,html[data-hf="rye"] #ij h3,html[data-hf="rye"] #ij .serif,html[data-hf="rye"] #ij .plan-name,html[data-hf="rye"] #ij .price,html[data-hf="rye"] #ij footer .big,html[data-hf="rye"] #ij .ij-word,html[data-hf="rye"] #ij .ctitle b,html[data-hf="rye"] #ij footer .join{padding-right:.35em!important;margin-right:-.35em!important;padding-top:.12em!important;padding-bottom:.1em!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* 2026-11-10: breathing room under headings */
+html[data-hf] #ij .wlcard h2{margin-bottom:28px!important}
+html[data-hf] #ij footer .join{margin-bottom:26px!important}
+html[data-hf] #ij .plans h2{margin-bottom:44px!important}
+html[data-hf] #ij .faq h2{margin-bottom:56px!important}
+#ij .jnw{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -652,7 +686,7 @@ body{margin:0;background:#fff}
 <section class="bhero torn-b" id="top">
   <video class="bvid" autoplay muted loop playsinline poster="img/beans-plantation-poster.jpg"><source src="beans-plantation.mp4" type="video/mp4"></video>
   <nav class="nav" id="ijnav">
-    <a class="logo" href="index.html"><img src="img/logo-indojack-v3.svg" alt="IndoJack Coffee"></a>
+    <a class="logo" href="index.html"><img src="img/logo-indojack-sign.png" alt="IndoJack Coffee"></a>
     <ul>
       <li><a href="beans.html" aria-current="page">The Beans</a></li>
       <li><a href="adventure.html">The Adventure</a></li>
@@ -661,7 +695,7 @@ body{margin:0;background:#fff}
     <button class="burger" aria-label="Menu" onclick="document.getElementById('ijnav').classList.toggle('open')">☰</button>
   </nav>
   <div class="inner">
-    <h1><span class="line"><span class="w"><em>Single-Origin</em></span></span><span class="line"><span class="w">Sumatra</span></span></h1>
+    <h1><span class="line"><span class="w"><em>Single-origin</em></span></span><span class="line"><span class="w">Sumatra</span></span></h1>
   </div>
 </section>
 
@@ -669,7 +703,7 @@ body{margin:0;background:#fff}
   <div class="wrap">
     <div class="sgrid">
       <div class="stext">
-        <h2 class="reveal">Our Beans</h2>
+        <h2 class="reveal">Our beans</h2>
         <p>Sumatra is the big island on the western side of Indonesia, the sixth largest in the world, lying across the equator in the Indian Ocean. Many of its best Arabica coffee beans come from Aceh, where the Gayo highland rises around the town of Takengon and Lake Laut Tawar. Coffee here grows at an average of 1,110 to 1,600 meters, on small family farms.</p>
         <p>Arabica first came to the Gayo highland in 1924. Today more than 90% of Indonesia's coffee is grown by smallholders on farms of around one hectare. Gayo farmers process their coffee at the farm using the traditional wet-hulled method, giling basah, which gives the cup its smooth, full body and low acidity. Lintong and Mandheling, two other famous Sumatran coffees grown further south on the island, are made the same way.</p>
         <p>The forests are home to a fascinating bird, the hornbill, called Rangkong in Indonesia, living in the mountain rain forests. Close by, Mount Leuser National Park also shelters the Sumatran tiger, the last surviving population on the island, with the rare orangutan and many elephants wandering this beautiful land.</p>
@@ -776,7 +810,6 @@ body{margin:0;background:#fff}
 </svg></div>
   <div class="wlcard reveal">
     <h2>Join the waitlist</h2>
-    <p>The first 500 people on our waitlist get free shipping on their first order, plus launch-day access and tasting-note updates.</p>
     <form class="wlform" onsubmit="this.classList.add('done');return false">
       <input type="email" required placeholder="Email address" aria-label="Email address">
       <button class="btn btn-yellow" type="submit">Sign up</button>
@@ -790,7 +823,7 @@ body{margin:0;background:#fff}
   <div class="wrap">
     <div class="grid">
       <div class="jleft">
-        <h2 id="judgeTitle">You'll be the judge<img class="jack-inline" src="img/jack-peek.png" alt="IndoJack"></h2>
+        <h2 id="judgeTitle">You'll be the <span class="jnw">judge<img class="jack-inline" src="img/jack-peek.png" alt="IndoJack"></span></h2>
         <p class="lead">Tell us if you think they're worth it. File your official tasting report below.</p>
         <div class="step"><span class="n">01</span><div><h3>Brew like a professional</h3><p>Same water (~200°F), brew as an Espresso (40ml).</p></div></div>
         <div class="step"><span class="n">02</span><div><h3>Taste blind, judge fairly</h3><p>Label the cups A / B / C.</p></div></div>
@@ -818,7 +851,7 @@ body{margin:0;background:#fff}
 
 <footer class="torn-t">
   <div class="wrap">
-    <div class="bigrow"><p class="big fit">INDOJACK</p></div>
+    <div class="bigrow"><p class="big fit">IndoJack</p></div>
     <div class="top">
       <div><p class="join">Join the expedition</p>
         <form class="news" onsubmit="return false"><input type="email" placeholder="Email address" aria-label="Email"><button>Sign up</button></form></div>
@@ -888,5 +921,7 @@ function ijtEmail(){const b=document.getElementById('ijt_bean').value||'a bean',
   location.href='mailto:admin@levenstein.net?cc=nick@levenstein.net,gabriella@levenstein.net&subject='+encodeURIComponent('IndoJack tasting report - '+b+' - '+t)+'&body='+encodeURIComponent('Official tasting report filed:\n\n'+document.getElementById('ijt_code').value+'\n\n('+document.getElementById('ijt_summary').textContent+')')}
 </script>
 <script src="hornbill.js"></script>
+<script>document.documentElement.setAttribute("data-hf","lucky")</script>
+</div>
 </body>
 </html>
