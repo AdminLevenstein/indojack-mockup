@@ -529,6 +529,14 @@ html[data-hf] #ij h1 .line{margin-bottom:-.24em!important}
 @media (max-width:480px){#ij .ijtop{right:12px;bottom:12px;font-size:13px;padding:9px 13px}}
 
 #ij .nav ul li:nth-child(3) a{transform:rotate(-1deg)}
+
+/* 2026-11-10: mobile Home hero like The Adventure (big headline top, big Jack bottom) */
+@media (max-width:900px){
+  #ij .hero-copy{top:118px!important;bottom:auto!important;left:7vw!important;right:7vw!important;max-width:none!important}
+  #ij .hero h1{font-size:clamp(2.4rem,11.5vw,3.6rem)!important}
+  #ij .jack-stage{right:2vw!important;bottom:calc(var(--tear) - 6px)!important}
+  #ij .jack{width:min(68vw,330px)!important}
+}
 </style>
 </head>
 <body>
@@ -833,7 +841,7 @@ html[data-hf] #ij h1 .line{margin-bottom:-.24em!important}
   // ---- oversize lettering: INDO / JACK fill the screen, footer INDOJACK fills the column width ----
   function jackFit(){
     const j=document.querySelector('#ij .jack'),st=document.querySelector('#ij .jack-stage'),hc=document.querySelector('#ij .hero-copy'),h=document.querySelector('#ij .hero h1');
-    if(innerWidth>900){j.style.width='';st.style.bottom='';hc.style.right='';return}
+    {j.style.width='';st.style.bottom='';hc.style.right='';return}
     const H=h.getBoundingClientRect().height, w=Math.round(H*600/732);   // jack-wave.png: visible art is 732px tall per 600px wide
     j.style.width=w+'px';st.style.bottom=getComputedStyle(hc).bottom;
     hc.style.right='calc(6vw + '+(w+10)+'px)';
