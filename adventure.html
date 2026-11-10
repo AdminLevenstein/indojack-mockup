@@ -1012,7 +1012,7 @@ const VOLS=[{"n": "01", "tag": "Escape", "title": "The fortress adventure", "blu
 <script>document.documentElement.setAttribute("data-hf","lucky")</script>
 </div>
 <script>(function(){var b=document.querySelector('#ij .ijtop');if(!b||b.dataset.wired)return;b.dataset.wired='1';
-function t(){b.classList.add('show')}
+var hero=document.querySelector('#ij section');function t(){var r=hero&&hero.getBoundingClientRect();b.classList.toggle('show',r?r.bottom<innerHeight*0.2:(window.pageYOffset>300))}
 window.addEventListener('scroll',t,{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});t();})();</script>
 </body>
 </html>
